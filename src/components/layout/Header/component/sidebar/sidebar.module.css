@@ -1,0 +1,157 @@
+.trigger {
+    display: none;
+    padding: 8px;
+    margin-left: 15px;
+}
+
+.trigger i{
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.trigger:hover i {
+    color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.1);
+}
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--background);
+    min-width: 300px;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    border-left: 1px solid var(--border-color);
+    color: var(--black);
+}
+.open {
+    visibility: visible;
+}
+.open .sidebar {
+    transform: translateX(0);
+}
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 20px;
+}
+.avatar {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.headInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.headInfo span {
+    font-family: var(--font-accent);
+    font-weight: var( --brand-weight);
+    font-size: 2.5rem;
+}
+
+.navLink,.navListLink {
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    gap: 16px;
+    padding: 14px 12px;
+    border-radius: 15px;
+    font-size: 1.8rem;
+}
+.navLink:hover,.navListLink:hover {
+    background-color: #d9d9d9;
+}
+.navLink i,.navListLink i {
+    font-size: 2rem;
+}
+
+.tail {
+    position: absolute;
+    bottom: 20px;
+}
+
+.navListItem {
+    width: 100%;
+}
+
+.hasSubmenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navListSublist {
+    top: calc(100% + 10px);
+    transform: translateX(-50%) translateY(-10px);
+    min-width: 200px;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-left: 30px;
+    padding: 8px 0;
+    display: none;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+
+.navListSublist.show {
+    display: block;
+    z-index: 0;
+    transform: translateX(0) translateY(0);
+}
+
+.navListSublistItem {
+    padding: 0;
+}
+
+.navListSublistItem a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navListSublistItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navListSublistItem:hover a {
+    color: var(--primary-color);
+    padding-left: 25px;
+}
+
+.navListItem.active .navListLink {
+    color: var(--primary-color);
+}
+
+@media (max-width: 850px) {
+    .trigger {
+        display: block;
+    }
+}

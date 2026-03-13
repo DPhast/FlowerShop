@@ -1,0 +1,199 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.scrolled {
+    background: var(--background);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ khi scroll */
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+/* Logo */
+.logoLink {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.logoLink h1 {
+    font-family: var(--font-accent);
+    color: var(--text-primary);
+    font-weight: var(--brand-weight);
+    margin: 0;
+    font-size: 3rem;
+}
+
+/* Navigation */
+.nav {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.navList {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.navListItem {
+    position: relative;
+}
+
+.navListLink {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.navListItem:hover .navListLink {
+    color: var(--primary-color);
+}
+
+/* Menu có submenu */
+.hasSubmenu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hasSubmenu i {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+.hasSubmenu.active i {
+    transform: rotate(180deg);
+}
+
+/* Submenu */
+.navListSublist {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    min-width: 200px;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    list-style: none;
+}
+
+.navListSublist.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.navListSublistItem {
+    padding: 0;
+}
+
+.navListSublistItem a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.navListSublistItem:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.navListSublistItem:hover a {
+    color: var(--primary-color);
+    padding-left: 25px;
+}
+
+.navListItem.active .navListLink {
+    color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        margin: 0 20px;
+    }
+    
+    .navList {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .nav {
+        display: none; /* Ẩn menu trên mobile */
+    }
+    
+    .userMenuItem {
+        margin-left: auto;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .logoLink {
+        font-size: 2.4rem;
+    }
+    
+    .logoLink h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Animation cho submenu */
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navListSublist.show,
+.userSublist.show {
+    animation: fadeIn 0.3s ease forwards;
+}

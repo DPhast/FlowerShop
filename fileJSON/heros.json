@@ -1,0 +1,42 @@
+[
+    {
+    "_id": "h1",
+    "title": "Gói trọn chân thành trong từng cánh hoa",
+    "subtitle": "Từ những nhành hồng lãng mạn đến hướng dương rạng rỡ, chúng tôi giúp bạn tạo nên những khoảnh khắc hạnh phúc bất ngờ cho người thân yêu.",
+    "image": "/images/hero-1.webp",
+    "buttonText": "Xem thêm",
+    "buttonLink": "/products-grid",
+    "createdAt": "2026-03-11T10:00:00Z",
+    "updatedAt": "2026-03-11T10:00:00Z"
+    },
+    {
+    "_id": "h2",
+    "title": "Đánh thức không gian sống bằng sắc màu thiên nhiên",
+    "subtitle": "Mang nét tinh tế và hơi thở cỏ cây vào ngôi nhà bạn với những bộ sưu tập hoa nghệ thuật độc bản từ",
+    "image": "/images/hero-2.webp",
+    "buttonText": "Xem thêm",
+    "buttonLink": "/products-grid",
+    "createdAt": "2026-03-11T10:00:00Z",
+    "updatedAt": "2026-03-11T10:00:00Z"
+    },
+    {
+    "_id": "h3",
+    "title": "Vì mỗi đóa hoa là một lời chưa nói",
+    "subtitle": "Đừng để những lời cảm ơn hay yêu thương ngủ quên. Chúng tôi giúp bạn gửi gắm sự chân thành qua những bó hoa tươi thắm, rực rỡ nhất trong ngày hôm nay.",
+    "image": "/images/hero-3.webp",
+    "buttonText": "Xem thêm",
+    "buttonLink": "/products-grid",
+    "createdAt": "2026-03-11T10:00:00Z",
+    "updatedAt": "2026-03-11T10:00:00Z"
+    },
+    {
+        "_id": "h4",
+        "title": "Ghi dấu sự kiện trọng đại cùng Bloom",
+        "subtitle": "Từ lễ cưới lung linh đến những buổi tiệc sang trọng, đội ngũ nghệ nhân của chúng tôi luôn sẵn sàng hiện thực hóa ý tưởng của bạn bằng ngôn ngữ của các loài hoa.",
+        "image": "/images/hero-4.webp",
+        "buttonText": "Xem thêm",
+        "buttonLink": "/products-grid",
+        "createdAt": "2026-03-12T09:00:00Z",
+        "updatedAt": "2026-03-12T09:00:00Z"
+    }
+]

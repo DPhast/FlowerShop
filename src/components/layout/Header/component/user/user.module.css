@@ -1,0 +1,149 @@
+.trigger {
+    padding: 8px;
+    margin-left: 15px;
+}
+
+.trigger i{
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.trigger:hover i {
+    color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(1.1);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.open {
+    visibility: visible;
+}
+
+.open .form {
+    transform: translateY(0);
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: var(--background);
+    width: fit-content;
+    height: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(80px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.frame.Active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.userText {
+    font-size: 16px;
+}
+
+.input {
+    font-family: "Dancing cript", cursive;
+    background-color: transparent;
+}
+
+.group {
+    background-color: transparent;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    top: 0;
+    left: 10px;
+}
+
+.groupItem {
+    padding: 5px;
+    gap: 5px;
+    flex: 1;
+    border: 1px solid gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groupBtn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.userBottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 10px;
+    padding: 0 5px;
+}
+
+.changePassword,.ForgotPassword{
+    transition: color 0.3s ease;
+    color: var(--black);
+}
+
+.changePassword:hover,.ForgotPassword:hover{
+    color: var(--primary-hover);
+}
+
+
+.groupBtn {
+    margin:10px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+button.button {
+    font-family: "Dancing cript";
+    font-size: 16px;
+    padding: 8px 32px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+button.button:hover {
+    background-color: var(--primary-hover);
+}
+
+.register {
+    display: flex;
+    width: 100% ;
+    justify-content: space-around;
+    font-size: 12px;
+    align-items: center;
+}
+
+.registerLink {
+    transition: color 0.3s ease;
+    color: var(--primary-color);
+}
+
+.registerLink:hover {
+    color: var(--primary-hover);
+}
+
