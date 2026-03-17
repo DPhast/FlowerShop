@@ -1,0 +1,16 @@
+{
+  "_id": "65f123abc",
+  "name": "Bó Hoa Hồng Tình Yêu",
+  "description": "Bó hoa hồng đỏ tượng trưng cho tình yêu",
+  "price": 200000,
+  "oldPrice": 250000,
+  "image": "/images/tren-img-1.png",
+  "rating": 5,
+  "category": "hoa-tinh-yeu",
+  "stock": 50,
+  "isTrending": true,
+  "isNew": true,
+  "isSale": true,
+  "discount": 17,
+  "createdAt": "2026-03-11T09:20:00.000Z"
+}

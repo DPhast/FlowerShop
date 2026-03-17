@@ -1,0 +1,59 @@
+.card {
+    width: 270px;
+    flex: 0 0 270px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    color: white;
+    transform: scale(0.92);
+    transition: transform 0.25s ease, border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.active {
+    transform: scale(1);
+    border-color: rgba(255, 255, 255, 0.45);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.thumb {
+    position: relative;
+    width: 100%;
+    height: 320px;
+}
+
+.thumbImage {
+    object-fit: cover;
+    object-position: center;
+}
+
+.meta {
+    padding: 10px 12px 12px;
+}
+
+.title {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    font-weight: 600;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-top: 40px;
+        width: 270px;
+        flex: 0 0 270px;
+    }
+
+    .thumb {
+        position: relative;
+        width: 100%;
+        height: 280px;
+    }
+}

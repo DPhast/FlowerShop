@@ -4,8 +4,13 @@
 }
 
 .trigger i{
+    color: var(--white);
     font-size: 18px;
     transition: all 0.3s ease;
+}
+
+.isScrolled i {
+    color: var(--black);
 }
 
 .trigger:hover i {

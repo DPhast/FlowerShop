@@ -1,0 +1,237 @@
+.hero {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.backgroundImg {
+    object-fit: cover;
+    object-position: center;
+}
+
+.modal {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+            1200px 500px at 25% 35%,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.35)
+        ),
+        linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.03));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.wrap {
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding-bottom: 96px;
+}
+
+.main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 56px;
+}
+
+.group {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 22px;
+    align-items: end;
+}
+
+.info {
+    padding-bottom: 60px;
+    max-width: 640px;
+    color: white;
+    opacity: 0;
+    animation: BlurAni 0.5s ease 0.7s forwards;
+}
+
+.infoName {
+    font-size: clamp(2rem, 3.2vw, 2.5rem);
+    line-height: 1.05;
+    font-weight: 700;
+    margin: 0;
+}
+
+.infoDescription {
+    opacity: 0.92;
+    line-height: 1.4;
+    font-size: clamp(1.125rem, 1.25vw, 1.35rem);
+    margin: 16px 0 0;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.cta {
+    border: 1px solid var(--primary-color);
+    margin-top: 68px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transform: translateY(0);
+    transition: background-color, transform 0.3s ease;
+}
+
+.cta:hover {
+    border: 0.2px solid var(--white);
+    background-color: transparent;
+    transform: translateY(-8px);
+}
+
+.viewport {
+    --card-w: 270px;
+    --visible-cards: 2.5;
+    width: calc(var(--card-w) * var(--visible-cards));
+    justify-self: end;
+    overflow: hidden;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.track {
+    display: flex;
+    gap: 0;
+    will-change: transform;
+}
+
+.tail {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.actions button {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: transform 0.2s ease, background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.actions button:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.actions button:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: block;
+    }
+
+    .viewport {
+        width: 100%;
+        justify-self: auto;
+        margin-top: 18px;
+    }
+
+    .tail {
+        bottom: 18px;
+    }
+
+    .info {
+        padding-bottom: 0px;
+        max-width: 640px;
+        color: white;
+    }
+    
+    .infoName {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: clamp(15px, 1.2vw, 18px);
+    }
+
+    .cta {
+        margin-top: 28px;
+    }
+
+    .cta .btnText {
+        font-size: 10px
+    }
+
+    .infoDescription {
+        text-align: start;
+    }
+}
+
+@media (max-width: 1028px) {
+
+    .infoName {
+        display: inline-flex;
+        justify-content: center;
+        align-items: start;
+        text-align: start;
+        font-size: clamp(15px, 1.2vw, 18px);
+    }
+
+    .cta .btnText {
+        font-size: clamp(1rem, 2.5rem, 1.5rem);
+        width: 80px;
+    }
+}
+
+@keyframes BlurAni {
+    from {
+        opacity: 0;
+        transform: translateY(500px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

@@ -13,13 +13,16 @@
 }
 
 .scrolled {
+    height: 100px;
     background: var(--background);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px); /* Hiệu ứng mờ khi scroll */
 }
 
-/* Container */
-.container {
+.scrolled .navListLink, .scrolled .logoLink h1{
+    color: var(--black);
+}
+
+.containerFluid {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,7 +45,7 @@
 
 .logoLink h1 {
     font-family: var(--font-accent);
-    color: var(--text-primary);
+    color: var(--white);
     font-weight: var(--brand-weight);
     margin: 0;
     font-size: 3rem;
@@ -68,7 +71,7 @@
 }
 
 .navListLink {
-    color: var(--text-primary);
+    color: var(--white);
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
@@ -91,6 +94,7 @@
 .hasSubmenu i {
     font-size: 1.4rem;
     transition: transform 0.3s ease;
+    color: inherit;
 }
 
 .hasSubmenu.active i {

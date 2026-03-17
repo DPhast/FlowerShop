@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "date": "2025-10-15",
+    "title": "Một Bông Hoa Một Thế Giới",
+    "slug": "mot-bong-hoa-mot-the-gioi",
+    "image": "images/blog-img-1.webp",
+    "excerpt": "Những điều vĩ đại nhất thường ẩn chứa trong những thứ nhỏ bé nhất qua triết lý Nhất hoa nhất thế giới.",
+    "content": "Triết lý “nhất hoa nhất thế giới” nhắc nhở chúng ta rằng trong từng cánh hoa nhỏ bé đều ẩn chứa một vũ trụ riêng. Khi chậm lại và quan sát thiên nhiên, ta sẽ nhận ra vẻ đẹp giản dị nhưng sâu sắc của cuộc sống, nơi mỗi bông hoa đều kể một câu chuyện về thời gian, sự sống và cảm xúc."
+  },
+  {
+    "id": 2,
+    "date": "2025-10-09",
+    "title": "Tình Yêu Và Hoa: Khi Ngôn Từ Nhường Chỗ Cho Sắc Hương",
+    "slug": "tinh-yeu-va-hoa",
+    "image": "images/blog-img-2.webp",
+    "excerpt": "Yêu hoa không phải là ngắt nó xuống để sở hữu, mà là học cách vun trồng để nó tự do tỏa sáng.",
+    "content": "Hoa luôn là biểu tượng tinh tế của tình yêu, bởi đôi khi những cảm xúc sâu sắc nhất lại không thể diễn tả bằng lời. Một bó hoa nhỏ có thể thay lời yêu thương, sự quan tâm và cả lời xin lỗi. Khi trao hoa cho ai đó, chúng ta đang gửi đi những cảm xúc chân thành nhất."
+  },
+  {
+    "id": 3,
+    "date": "2026-01-15",
+    "title": "Hoa Hồng (Rose) Biểu tượng của Tình yêu Vĩnh cửu",
+    "slug": "bieu-tuong-hoa-hong",
+    "image": "images/blog-img-3.webp",
+    "excerpt": "Nữ hoàng của mọi đám cưới với sự đa dạng về màu sắc và ý nghĩa nồng cháy.",
+    "content": "Hoa hồng từ lâu đã được xem là nữ hoàng của các loài hoa trong những dịp đặc biệt. Mỗi màu sắc của hoa hồng lại mang một thông điệp riêng: đỏ tượng trưng cho tình yêu mãnh liệt, trắng cho sự thuần khiết và hồng cho sự dịu dàng. Chính sự đa dạng này khiến hoa hồng luôn được yêu thích."
+  },
+  {
+    "id": 4,
+    "date": "2026-01-20",
+    "title": "Nghệ Thuật Cắm Hoa Ikebana: Tìm Lại Bản Ngã",
+    "slug": "nghe-thuat-ikebana",
+    "image": "images/blog-img-4.webp",
+    "excerpt": "Khám phá phong cách cắm hoa truyền thống Nhật Bản, nơi mỗi cành lá đều kể một câu chuyện về sự cân bằng.",
+    "content": "Ikebana không chỉ đơn thuần là nghệ thuật cắm hoa mà còn là cách con người kết nối với thiên nhiên. Mỗi cành hoa, chiếc lá được sắp đặt với sự cân bằng và hài hòa, thể hiện triết lý sống giản dị của người Nhật. Qua Ikebana, ta học cách lắng nghe và tìm lại sự bình yên."
+  },
+  {
+    "id": 5,
+    "date": "2026-02-01",
+    "title": "Bí Quyết Giữ Hoa Tươi Lâu Trong 10 Ngày",
+    "slug": "bi-quyet-giu-hoa-tuoi",
+    "image": "images/blog-img-5.webp",
+    "excerpt": "Đừng để hoa héo sớm! Những mẹo nhỏ với nước và ánh sáng giúp bình hoa của bạn luôn rạng rỡ.",
+    "content": "Để giữ hoa tươi lâu hơn, bạn chỉ cần áp dụng một vài mẹo nhỏ nhưng hiệu quả. Thay nước thường xuyên, cắt gốc hoa theo góc nghiêng và đặt bình hoa ở nơi mát mẻ, tránh ánh nắng trực tiếp. Những thói quen đơn giản này sẽ giúp bình hoa luôn tươi tắn suốt nhiều ngày."
+  },
+  {
+    "id": 6,
+    "date": "2026-02-14",
+    "title": "Top 5 Loại Hoa Tặng Người Thương Dịp Valentine",
+    "slug": "hoa-tang-valentine",
+    "image": "images/blog-img-6.webp",
+    "excerpt": "Ngoài hoa hồng đỏ, hãy thử tìm hiểu ý nghĩa của hoa Tulip hay Linh lan cho ngày lễ tình nhân thêm đặc biệt.",
+    "content": "Ngày Valentine là dịp để bày tỏ tình cảm với người mình yêu thương. Ngoài hoa hồng đỏ truyền thống, bạn có thể chọn tulip tượng trưng cho tình yêu hoàn hảo hay hoa linh lan mang ý nghĩa hạnh phúc. Mỗi loài hoa đều mang một thông điệp đặc biệt dành cho người nhận."
+  },
+  {
+    "id": 7,
+    "date": "2026-02-28",
+    "title": "Hoa Và Phong Thủy: Đặt Hoa Gì Để Rước Tài Lộc?",
+    "slug": "hoa-va-phong-thuy",
+    "image": "images/blog-img-7.webp",
+    "excerpt": "Vị trí đặt hoa trong phòng khách không chỉ làm đẹp mà còn mang lại năng lượng tích cực cho gia chủ.",
+    "content": "Trong phong thủy, hoa không chỉ là vật trang trí mà còn mang lại nguồn năng lượng tích cực cho ngôi nhà. Những loài hoa như hoa mẫu đơn, hoa lan hay hoa đồng tiền thường được lựa chọn để thu hút may mắn và tài lộc. Quan trọng nhất là đặt hoa ở vị trí phù hợp."
+  },
+  {
+    "id": 8,
+    "date": "2026-03-05",
+    "title": "Mùa Hoa Sưa Tháng 3: Hà Nội Trở Nên Thơ Mộng",
+    "slug": "mua-hoa-sua-ha-noi",
+    "image": "images/blog-img-8.webp",
+    "excerpt": "Cùng ngắm nhìn những góc phố trắng xóa màu hoa sưa, nét đặc trưng dịu dàng của thủ đô vào xuân.",
+    "content": "Tháng ba về, những con phố Hà Nội bỗng trở nên thơ mộng hơn với sắc trắng của hoa sưa. Những chùm hoa nhỏ li ti phủ kín tán cây, rơi nhẹ xuống lòng đường tạo nên khung cảnh rất riêng của mùa xuân thủ đô. Đây cũng là khoảnh khắc được nhiều người yêu thích."
+  },
+  {
+    "id": 9,
+    "date": "2026-03-08",
+    "title": "Hoa Hướng Dương: Thông Điệp Về Sự Kiên Định",
+    "slug": "y-nghia-hoa-huong-duong",
+    "image": "images/blog-imge-9.webp",
+    "excerpt": "Luôn hướng về phía mặt trời, loài hoa này truyền cảm hứng cho những ai đang tìm kiếm niềm tin vào cuộc sống.",
+    "content": "Hoa hướng dương luôn quay về phía mặt trời, như một biểu tượng của niềm tin và sự kiên định. Hình ảnh đó nhắc nhở chúng ta rằng dù cuộc sống có khó khăn đến đâu, chỉ cần giữ vững hy vọng và hướng về những điều tích cực, ta sẽ luôn tìm thấy ánh sáng."
+  },
+  {
+    "id": 10,
+    "date": "2026-03-12",
+    "title": "Trà Hoa: Thức Quà Tinh Túy Từ Thiên Nhiên",
+    "slug": "tra-hoa-thien-nhien",
+    "image": "images/blog-img-10.webp",
+    "excerpt": "Thưởng thức trà từ hoa cúc, hoa nhài giúp thanh lọc cơ thể và mang lại giấc ngủ sâu hơn.",
+    "content": "Trà hoa là một trong những thức uống thanh tao được nhiều người yêu thích. Từ hoa cúc, hoa nhài cho đến hoa hồng, mỗi loại trà đều mang hương thơm dịu nhẹ và lợi ích riêng cho sức khỏe. Một tách trà hoa ấm vào buổi tối giúp thư giãn và ngủ ngon hơn."
+  }
+]

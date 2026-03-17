@@ -1,0 +1,365 @@
+/* Reviews.module.css */
+
+.Reviews {
+    width: 100%;
+    padding: 80px 0;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.WrapImage {
+    flex: 1;
+    position: relative;
+    right: -0px;
+    height: 500px;
+    border-radius: 0 30px 30px 0;
+    overflow: hidden;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.ReviewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.WrapImage:hover .ReviewImage {
+    transform: scale(1.05);
+}
+
+.wrapper {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+}
+
+.ReviewsTitle {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.ReviewsLable {
+    font-family: var(--font-accent);
+    font-size: 8rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    line-height: 1;
+}
+
+.WrapSlider {
+    position: relative;
+    min-height: 300px;
+    margin-top: 30px;
+}
+
+.ReviewSlide {
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    padding-bottom: 80px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 20px 0;
+    animation: fadeIn 0.3s ease;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.Title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20;
+}
+
+.Title::before {
+    content: '"';
+    font-family: var(--font-accent);
+    font-size: 3rem;
+    color: var(--primary-color);
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    opacity: 0.5;
+}
+
+.Content {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.Customer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.WrapAvatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(238, 76, 124, 0.2);
+}
+
+.CustomerAvatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CustomerName {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.CustomerName:last-child {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.btnPrev,
+.btnNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btnPrev {
+    left: -20px;
+}
+
+.btnNext {
+    right: -20px;
+}
+
+.btnPrev i,
+.btnNext i {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+.btnPrev:hover:not(.disabled),
+.btnNext:hover:not(.disabled) {
+    background: var(--primary-color);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.btnPrev:hover i,
+.btnNext:hover i {
+    color: white;
+}
+
+.btnPrev.disabled,
+.btnNext.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--border-color);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background: var(--primary-color);
+    opacity: 0.5;
+}
+
+.dotActive {
+    background: var(--primary-color);
+    transform: scale(1.3);
+    width: 12px;
+    border-radius: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .Reviews {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .WrapImage {
+        display: none;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .btnPrev {
+        left: -20px;
+    }
+
+    .btnNext {
+        right: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .WrapImage {
+        display: none;
+    }
+
+    .ReviewsTitle {
+        font-size: 2.8rem;
+    }
+
+    .ReviewsLable {
+        font-size: 6rem;
+        top: 0;
+        right: 20px;
+    }
+
+    .ReviewSlide {
+        padding: 20px;
+    }
+
+    .Title {
+        font-size: 1.8rem;
+    }
+
+    .Content {
+        font-size: 1.4rem;
+    }
+
+    .Customer {
+        flex-wrap: wrap;
+    }
+
+    .btnPrev,
+    .btnNext {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btnPrev i,
+    .btnNext i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .Reviews {
+        padding: 40px 15px;
+    }
+
+    .ReviewSlide {
+        height: 400px;
+    }
+
+    .WrapImage {
+        display: none;
+    }
+
+    .ReviewsTitle {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    .ReviewsLable {
+        display: none;
+    }
+
+    .btnPrev,
+    .btnNext {
+        display: none;
+    }
+
+    .dots {
+        margin-top: 20px;
+    }
+
+    .Customer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .WrapAvatar {
+        margin-bottom: 10px;
+    }
+}
+
+
+.ReviewSlide::after {
+    content: '"';
+    font-family: var(--font-accent);
+    font-size: 15rem;
+    color: var(--primary-color);
+    opacity: 0.03;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.ReviewSlide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(238, 76, 124, 0.15);
+    transition: all 0.3s ease;
+}

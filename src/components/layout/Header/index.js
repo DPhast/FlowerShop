@@ -12,8 +12,7 @@ import styles from './Header.module.css';
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isExploreActive, setIsExploreActive] = useState(false);
-    const [isUserActive, setIsUserActive] = useState(false);
-    const [isSearchActive, setIsSearchActive] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
@@ -32,27 +31,14 @@ export default function Header() {
         setIsExploreActive(false);
     }
 
-    const handleUserClick = (e) => {
-        e.preventDefault();
-        setIsUserActive(!isUserActive);
-    }
-
-    const handleUserSubItemClick = ()  => {
-        setIsUserActive(false);
-    }
-
-    const handleSearchClick = (e) => {
-        e.preventDefault();
-        setIsSearchActive(!isSearchActive);
-    }
-
-    const handleSearchItemClick = (e) => {
-        setIsSearchActive(false);
-    }
-
     return (
-        <header className={clsx( 'header',styles.header, { [styles.scrolled]: isScrolled, [styles.notScrolled]: !isScrolled })}>
-            <div className={styles.container}>
+        <header
+            className={clsx("header", styles.header, {
+                [styles.scrolled]:isScrolled,
+                [styles.notScrolled]:!isScrolled,
+            })}
+        >
+            <div className={styles.containerFluid}>
                 <Link href="/" className={styles.logoLink}>
                     <Image 
                         src="/images/logo.webp" 
@@ -70,7 +56,7 @@ export default function Header() {
                             <Link href="/" className={styles.navListLink}>Trang chủ</Link>
                         </li>
                         <li className={styles.navListItem}>
-                            <Link href="/" className={styles.navListLink}>Về chúng tôi</Link>
+                            <Link href="/about" className={styles.navListLink}>Về chúng tôi</Link>
                         </li>
                         <li className={clsx(styles.navListItem, styles.hasSubmenu,
                             {[ styles.active]:isExploreActive}
@@ -82,28 +68,28 @@ export default function Header() {
                             isExploreActive ? "fi-rs-caret-up" : "fi-rs-caret-down")}></i>
                             <ul className={clsx(styles.navListSublist,
                                 {[styles.show]:isExploreActive})}>
-                                <li className={styles.navListSublistItem}><Link href="/product-grid" onClick={handleSubItemClick}>Sản phẩm</Link></li>
+                                <li className={styles.navListSublistItem}><Link href="/products-grid" onClick={handleSubItemClick}>Sản phẩm</Link></li>
                                 <li className={styles.navListSublistItem}><Link href="#">Dịch vụ</Link></li>
                                 <li className={styles.navListSublistItem}><Link href="#">Hướng dẫn mua hàng</Link></li>
                                 <li className={styles.navListSublistItem}><Link href="#">FAQ</Link></li>
                             </ul>
                         </li>
                         <li className={styles.navListItem}>
-                            <Link href="/" className={styles.navListLink}>Blogs</Link>
+                            <Link href="/blogs" className={styles.navListLink}>Blogs</Link>
                         </li>
                         <li className={styles.navListItem}>
-                            <Link href="/" className={styles.navListLink}>Liên hệ</Link>
+                            <Link href="/contact" className={styles.navListLink}>Liên hệ</Link>
                         </li>
                     </ul>
                 </nav>
 
-                <Search />
+                <Search isScrolled={isScrolled} />
 
-                <User />
+                <User isScrolled={isScrolled} />
 
-                <Cart />
+                <Cart isScrolled={isScrolled} />
                 
-                <Sidebar />
+                <Sidebar isScrolled={isScrolled} />
             </div>
         </header>
     );

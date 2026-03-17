@@ -1,0 +1,406 @@
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2634 100%);
+    color: #fff;
+    padding: 60px 0 20px;
+    overflow: hidden;
+}
+
+.footerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('/images/footer-image.webp') repeat;
+    background-size: cover;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.footerContent {
+    position: relative;
+    z-index: 2;
+}
+
+.footerRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.logoName {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.logoName a {
+    text-decoration: none;
+}
+
+.logoName h3 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    color: #fff;
+    margin: 0;
+}
+
+.slogan {
+    font-family: var(--font-accent);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.quicklink h4,
+.information h4,
+.support h4,
+.contact h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.quicklink h4::after,
+.information h4::after,
+.support h4::after,
+.contact h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.quicklink ul,
+.information ul,
+.support ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quicklink li,
+.information li,
+.support li {
+    margin-bottom: 12px;
+}
+
+.quicklink a,
+.information a,
+.support a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.quicklink a:hover,
+.information a:hover,
+.support a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.contact i {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    width: 20px;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialIcons,
+.paymentIcons {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcons a,
+.paymentIcons a {
+    color: #fff;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    font-size: 2rem;
+}
+
+.socialIcons a:hover,
+.paymentIcons a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 1.4rem;
+    opacity: 0.6;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 50px 0 20px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .socialIcons,
+    .paymentIcons {
+        justify-content: center;
+    }
+
+    .copyright {
+        order: 1;
+    }
+
+    .socialIcons {
+        order: 2;
+    }
+
+    .paymentIcons {
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footerRow {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .logoName {
+        justify-content: center;
+    }
+
+    .quicklink h4::after,
+    .information h4::after,
+    .support h4::after,
+    .contact h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+    }
+
+    .contact p {
+        justify-content: center;
+    }
+
+    .about,
+    .quicklink,
+    .information,
+    .support,
+    .contact {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .quicklink a:hover,
+    .information a:hover,
+    .support a:hover {
+        transform: translateX(0) scale(1.05);
+    }
+
+    .slogan {
+        font-size: 1.7rem;
+    }
+
+    .description {
+        font-size: 1.3rem;
+        padding: 0 15px;
+    }
+
+    .quicklink h4,
+    .information h4,
+    .support h4,
+    .contact h4 {
+        font-size: 1.7rem;
+    }
+
+    .contact p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footerRow {
+        margin-bottom: 20px;
+    }
+
+    .logoName h3 {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        padding: 0 10px;
+    }
+
+    .quicklink h4,
+    .information h4,
+    .support h4,
+    .contact h4 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .quicklink li,
+    .information li,
+    .support li {
+        margin-bottom: 10px;
+    }
+
+    .quicklink a,
+    .information a,
+    .support a {
+        font-size: 1.3rem;
+    }
+
+    .contact p {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .contact i {
+        font-size: 1.4rem;
+    }
+
+    .divider {
+        margin: 20px 0;
+    }
+
+    .socialIcons,
+    .paymentIcons {
+        gap: 12px;
+    }
+
+    .socialIcons a,
+    .paymentIcons a {
+        font-size: 1.8rem;
+    }
+
+    .copyright p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .logoName {
+        gap: 5px;
+    }
+
+    .logoName h3 {
+        font-size: 1.8rem;
+    }
+
+    .slogan {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        font-size: 1.1rem;
+    }
+
+    .quicklink h4,
+    .information h4,
+    .support h4,
+    .contact h4 {
+        font-size: 1.5rem;
+    }
+
+    .paymentIcons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .paymentIcons a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .footer {
+        padding: 30px 0 15px;
+    }
+
+    .footerRow {
+        margin-bottom: 20px;
+    }
+
+    .about,
+    .quicklink,
+    .information,
+    .support,
+    .contact {
+        margin-bottom: 20px;
+    }
+}
+
+@media print {
+    .footer {
+        background: none;
+        color: #000;
+        padding: 20px 0;
+    }
+
+    .footerOverlay {
+        display: none;
+    }
+
+    .socialIcons,
+    .paymentIcons {
+        display: none;
+    }
+}

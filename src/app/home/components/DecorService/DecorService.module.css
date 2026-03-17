@@ -1,0 +1,174 @@
+
+.decorService {
+    width: 100%;
+    padding: 80px 0;
+    background: var(--background-fade);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.decorImg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.decorImg:hover .image {
+    transform: scale(1.05);
+}
+
+.decorText {
+    padding: 40px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.subtitle {
+    font-family: var(--font-accent);
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--white);
+    box-shadow: 0 10px 25px rgba(238, 76, 124, 0.2);
+}
+
+@media (max-width: 992px) {
+    .row {
+        gap: 30px;
+    }
+
+    .decorImg {
+        height: 400px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .decorText {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .decorService {
+        padding: 60px 0;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .decorImg {
+        height: 350px;
+    }
+
+    .decorText {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .heading {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .decorService {
+        padding: 40px 0;
+    }
+
+    .decorImg {
+        height: 250px;
+    }
+
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .description {
+        font-size: 1.4rem;
+    }
+
+    .button {
+        padding: 12px 25px;
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+}

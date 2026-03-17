@@ -1,0 +1,102 @@
+[
+  {
+    "id": "r1",
+    "title": "Dịch vụ tuyệt vời và hoa đẹp.",
+    "content": "Tôi đã đặt một bó hoa cho sinh nhật của bạn gái và cô ấy rất thích. Dịch vụ giao hàng nhanh chóng và hoa tươi lâu. Tôi chắc chắn sẽ đặt hàng lại.",
+    "customer": {
+      "name": "Bruno Mars",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-1.jpg"
+    }
+  },
+  {
+    "id": "r2",
+    "title": "Chất lượng vượt xa mong đợi.",
+    "content": "Hoa được thiết kế rất có gu và sang trọng. Đội ngũ nhân viên tư vấn nhiệt tình, đóng gói rất cẩn thận. Rất hài lòng với trải nghiệm này.",
+    "customer": {
+      "name": "Sia",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-2.jpg"
+    }
+  },
+  {
+    "id": "r3",
+    "title": "Món quà hoàn hảo cho ngày kỷ niệm.",
+    "content": "Màu sắc hoa rực rỡ và mùi hương rất dễ chịu. Đây là lần thứ ba tôi đặt hoa tại đây và chưa bao giờ thất vọng. Chắc chắn sẽ tiếp tục ủng hộ.",
+    "customer": {
+      "name": "Adele",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-3.jpg"
+    }
+  },
+  {
+    "id": "r4",
+    "title": "Hoa rất tươi và giao đúng giờ.",
+    "content": "Tôi đặt hoa cho mẹ vào ngày sinh nhật và shop giao đúng giờ. Hoa tươi, màu sắc đẹp và được gói rất cẩn thận.",
+    "customer": {
+      "name": "Taylor Swift",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-4.jpg"
+    }
+  },
+  {
+    "id": "r5",
+    "title": "Thiết kế hoa cực kỳ tinh tế.",
+    "content": "Bó hoa được thiết kế rất nghệ thuật. Nhìn ngoài còn đẹp hơn trong hình trên website.",
+    "customer": {
+      "name": "Ed Sheeran",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-5.jpg"
+    }
+  },
+  {
+    "id": "r6",
+    "title": "Dịch vụ chăm sóc khách hàng tốt.",
+    "content": "Nhân viên hỗ trợ rất nhanh và nhiệt tình. Tôi được tư vấn chọn bó hoa rất phù hợp.",
+    "customer": {
+      "name": "Billie Eilish",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-6.jpg"
+    }
+  },
+  {
+    "id": "r7",
+    "title": "Giao hàng nhanh chóng.",
+    "content": "Chỉ sau vài giờ đặt hàng là hoa đã được giao. Rất tiện lợi khi cần quà gấp.",
+    "customer": {
+      "name": "Justin Bieber",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-7.jpg"
+    }
+  },
+  {
+    "id": "r8",
+    "title": "Hoa giữ được rất lâu.",
+    "content": "Sau vài ngày hoa vẫn tươi và thơm. Chất lượng thực sự đáng tiền.",
+    "customer": {
+      "name": "Ariana Grande",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-8.jpg"
+    }
+  },
+  {
+    "id": "r9",
+    "title": "Trang trí rất đẹp.",
+    "content": "Bó hoa được trang trí rất sang trọng. Phù hợp làm quà tặng cho nhiều dịp.",
+    "customer": {
+      "name": "Shawn Mendes",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-9.jpg"
+    }
+  },
+  {
+    "id": "r10",
+    "title": "Trải nghiệm mua hoa tuyệt vời.",
+    "content": "Từ đặt hàng đến giao hàng đều rất chuyên nghiệp. Tôi sẽ giới thiệu shop cho bạn bè.",
+    "customer": {
+      "name": "Selena Gomez",
+      "role": "Khách Hàng Thân Thiết",
+      "avatar": "/images/ctm-avt-img-10.jpg"
+    }
+  }
+]

@@ -1,1 +1,11 @@
 export { default as Hero } from "./Hero";
+export { default as Features } from "./Features";
+export { default as Collections } from "./Collections";
+export { default as TrendingProducts } from "./TrendingProduct";
+export { default as DecorService } from "./DecorService";
+export { default as SaleProducts } from "./SaleProducts";
+export { default as BrandBanner } from "./BrandBanner";
+export { default as Stats } from "./Stats";
+export { default as Reviews } from "./Review";
+export { default as Blogs } from "./Blogs";
+export { default as Newsletter } from "./Newletters";

@@ -5,8 +5,13 @@
 }
 
 .trigger i{
+    color: var(--white);
     font-size: 18px;
     transition: all 0.3s ease;
+}
+
+.isScrolled i {
+    color: var(--black);
 }
 
 .trigger:hover i {
@@ -83,6 +88,7 @@
 }
 .navLink:hover,.navListLink:hover {
     background-color: #d9d9d9;
+    color: var(--primary-color);
 }
 .navLink i,.navListLink i {
     font-size: 2rem;

@@ -7,10 +7,10 @@ import clsx from "clsx";
 
 import styles from "./sidebar.module.css";
 
-export default function Sidebar() {
+export default function Sidebar({isScrolled}) {
     const [isOpen, setIsOpen] = useState(false);
     const [isExploreActive, setIsExploreActive] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false)
 
     // Effect để theo dõi resize
     useEffect(() => {
@@ -46,7 +46,9 @@ export default function Sidebar() {
     }
     return (
         <>
-            <button className={styles.trigger} onClick={() => setIsOpen(true)}>
+            <button className={clsx(styles.trigger,
+                isScrolled && styles.isScrolled
+            )} onClick={() => setIsOpen(true)}>
                 <i className="fi fi-br-menu-burger"></i>
             </button>
             <div
@@ -81,7 +83,7 @@ export default function Sidebar() {
                             <li>
                                 <Link
                                     className={styles.navLink}
-                                    href="/"
+                                    href="/about"
                                 >
                                     <i className="fi fi-rs-marker"></i>
                                     <span>Về chúng tôi</span>
@@ -96,7 +98,7 @@ export default function Sidebar() {
                                     isExploreActive ? "fi-rs-caret-up" : "fi-rs-caret-down")}></i></Link>
                                 <ul className={clsx(styles.navListSublist,
                                     {[styles.show]:isExploreActive})}>
-                                    <li className={styles.navListSublistItem}><Link href="/product-grid" onClick={handleSubItemClick}>Sản phẩm</Link></li>
+                                    <li className={styles.navListSublistItem}><Link href="/products-grid" onClick={handleSubItemClick}>Sản phẩm</Link></li>
                                     <li className={styles.navListSublistItem}><Link href="#">Dịch vụ</Link></li>
                                     <li className={styles.navListSublistItem}><Link href="#">Hướng dẫn mua hàng</Link></li>
                                     <li className={styles.navListSublistItem}><Link href="#">FAQ</Link></li>
@@ -105,9 +107,9 @@ export default function Sidebar() {
                             <li>
                                 <Link
                                     className={styles.navLink}
-                                    href="/contact"
+                                    href="/blogs"
                                 >
-                                    <i className="fi fi-rs-phone-call"></i>
+                                    <i className="fi fi-rr-blog-text"></i>
                                     <span>Blogs</span>
                                 </Link>
                             </li>
@@ -122,12 +124,6 @@ export default function Sidebar() {
                             </li>
                         </ul>
                     </nav>
-                    <div className={styles.tail}>
-                        <Link className={styles.logout} href="/logout">
-                            <i className="fi fi-br-exit"></i>
-                            <span>Đăng xuất</span>
-                        </Link>
-                    </div>
                 </aside>
             </div>
         </>

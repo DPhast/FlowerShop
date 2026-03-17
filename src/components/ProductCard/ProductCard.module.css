@@ -1,0 +1,245 @@
+.productCard {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(238, 76, 124, 0.15);
+}
+
+/* Image wrapper */
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.productImage {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.productCard:hover .productImage {
+    transform: scale(1.05);
+}
+
+/* Badge container */
+.badgeContainer {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    min-width: 45px;
+}
+
+.newBadge {
+    background: #4CAF50;
+}
+
+.saleBadge {
+    background: var(--primary-color, #EE4C7C);
+}
+
+/* Action buttons sidebar */
+.actionSidebar {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.productCard:hover .actionSidebar {
+    opacity: 1;
+    visibility: visible;
+    right: 16px;
+}
+
+.actionBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.actionBtn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.actionBtn:hover {
+    background: var(--primary-color, #EE4C7C);
+    color: white;
+    transform: scale(1.1);
+}
+
+.productInfo {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.productName {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s ease;
+}
+
+.productName:hover {
+    color: var(--primary-color, #EE4C7C);
+}
+
+.priceContainer {
+    font-family: var(--font-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.salePrice {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color, #EE4C7C);
+}
+
+.regularPrice {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.originalPrice {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.FadeoriginalPrice {
+    opacity: 0;
+    visibility: hidden;
+    text-decoration: line-through;
+    font-size: 1.4rem;
+}
+
+.mobileAddToCart {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.mobileAddToCart:hover {
+    background: var(--primary-hover, #ee2f68);
+}
+
+.trending .actionSidebar {
+    right: 8px;
+}
+
+.trending .actionBtn {
+    width: 36px;
+    height: 36px;
+}
+
+.trending .actionBtn i {
+    font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .actionSidebar {
+        display: none;
+    }
+    
+    .mobileAddToCart {
+        display: flex;
+    }
+    
+    .productInfo {
+        padding: 12px;
+    }
+    
+    .productName {
+        font-size: 1.4rem;
+    }
+    
+    .salePrice,
+    .regularPrice {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .badge {
+        font-size: 1rem;
+        padding: 3px 6px;
+    }
+    
+    .productName {
+        font-size: 1.3rem;
+    }
+
+    .mobileAddToCart {
+        font-size: 0.72rem;
+    }
+}

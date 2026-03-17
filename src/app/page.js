@@ -1,18 +1,39 @@
-import { getHeroes, getProducts , getBlogs, getReviews } from "@/services";
+import { getHeroes, getProducts, getBlogs, getReviews } from "@/services";
 import {
     Hero,
     Features,
     Collections,
-    Trending,
-    Service,
-    Sale,
-    Entry,
+    TrendingProducts,
+    DecorService,
+    SaleProducts,
+    BrandBanner,
     Stats,
+    Reviews,
     Blogs,
-    letters
+    Newsletter
 } from "./home/components";
-export default function Home() {
+
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const heroes = await getHeroes();
+  const products = await getProducts();
+  const reviews = await getReviews();
+  const blogs = await getBlogs();
+
   return (
-    <div></div>
+    <>
+        <Hero data={heroes} />
+        <Features />
+        <Collections />
+        <TrendingProducts data={products} />
+        <DecorService />
+        <SaleProducts data={products} />
+        <BrandBanner />
+        <Stats />
+        <Reviews data={reviews} />
+        <Blogs data={blogs} />
+        <Newsletter />
+    </>
   );
 }

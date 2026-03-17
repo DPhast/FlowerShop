@@ -1,0 +1,119 @@
+.TrendingProducts {
+    width: 100%;
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.containerFluid {
+    composes: containerFluid from global;
+}
+
+.TrendingTitle {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.productsGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.navButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navButton i {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton:hover:not(.disabled) {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.navButton.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.positionInfo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 2fr);
+    }
+    
+    .TrendingTitle {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 2fr);
+        gap: 15px;
+    }
+    
+    .navButton {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .navButton i {
+        font-size: 1.6rem;
+    }
+    
+    .wrapper {
+        gap: 10px;
+    }
+    
+    .TrendingTitle {
+        font-size: 2.4rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 2fr);
+    }
+    
+    .positionInfo {
+        font-size: 1.2rem;
+    }
+}

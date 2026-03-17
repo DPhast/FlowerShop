@@ -8,11 +8,13 @@ import {useState, useEffect} from 'react';
 
 import styles from './user.module.css';
 
-export default function User() {
+export default function User({isScrolled}) {
      const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <button className={styles.trigger} onClick={() => setIsOpen(true)}>
+            <button className={clsx(styles.trigger,
+                isScrolled && styles.isScrolled
+            )} onClick={() => setIsOpen(true)}>
                 <i className="fi fi-rr-user"></i>
             </button>
 

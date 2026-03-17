@@ -1,0 +1,267 @@
+/* components/SaleProducts.module.css */
+
+.SaleProducts {
+    width: 100%;
+    padding: 60px 0;
+    background: var(--white);
+}
+
+.container {
+    composes: containerFluid from global;
+}
+
+/* Header với timer */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.titleWrapper {
+    text-align: left;
+}
+
+.SaleTitle {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 5px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.SaleTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.subtitle {
+    font-family: var(--font-accent);
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+/* Timer */
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(238, 76, 124, 0.15);
+}
+
+.timerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60px;
+}
+
+.timerNumber {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.timerLabel {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.timerSeparator {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: -10px;
+}
+
+/* Wrapper và navigation (giống TrendingProducts) */
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.productsGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Navigation buttons */
+.navButton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: white;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navButton i {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navButton:hover:not(.disabled) {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.navButton.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.positionInfo {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+}
+
+/* ===== DESKTOP (≥ 1024px) ===== */
+@media (min-width: 1024px) {
+    .productsGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .SaleTitle {
+        font-size: 3.2rem;
+    }
+    
+    .timerNumber {
+        font-size: 2.4rem;
+    }
+    
+    .timer {
+        padding: 15px 25px;
+    }
+    
+    /* Nút điều hướng luôn hiển thị */
+    .navButton {
+        display: flex;
+    }
+}
+
+/* ===== TABLET & MOBILE (< 1024px) ===== */
+@media (max-width: 1023px) {
+    .productsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .titleWrapper {
+        text-align: center;
+    }
+    
+    .SaleTitle::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .SaleTitle {
+        font-size: 2.8rem;
+    }
+    
+    .timerNumber {
+        font-size: 2rem;
+    }
+    
+    .timer {
+        padding: 12px 20px;
+    }
+    
+    .timerItem {
+        min-width: 45px;
+    }
+    
+    .timerLabel {
+        font-size: 1rem;
+    }
+    
+    .navButton {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .navButton i {
+        font-size: 1.8rem;
+    }
+    
+    .positionInfo {
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== MOBILE NHỎ (< 576px) ===== */
+@media (max-width: 575px) {
+    .productsGrid {
+        gap: 12px;
+    }
+    
+    .SaleTitle {
+        font-size: 2.4rem;
+    }
+    
+    .timer {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .timerItem {
+        min-width: 35px;
+    }
+    
+    .timerNumber {
+        font-size: 1.6rem;
+    }
+    
+    .timerLabel {
+        font-size: 0.9rem;
+    }
+    
+    .timerSeparator {
+        font-size: 1.6rem;
+    }
+    
+    .positionInfo {
+        font-size: 1.2rem;
+    }
+}

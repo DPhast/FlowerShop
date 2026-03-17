@@ -8,11 +8,13 @@ import {useState, useEffect} from 'react';
 
 import styles from './search.module.css';
 
-export default function Search() {
+export default function Search({isScrolled}) {
      const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <button className={styles.trigger} onClick={() => setIsOpen(true)}>
+            <button className={clsx(styles.trigger,
+                isScrolled && styles.isScrolled
+            )} onClick={() => setIsOpen(true)}>
                 <i className="fi fi-rr-search"></i>
             </button>
 
@@ -25,7 +27,8 @@ export default function Search() {
             >
                 <div className={clsx(styles.frame,
                     {[styles.Active]: isOpen}
-                )}>
+                )}
+                onClick={(e) => e.stopPropagation()}>
                     <form className={styles.form}
                     onClick={(e) => e.stopPropagation()}>
                         <div className={styles.group}>
